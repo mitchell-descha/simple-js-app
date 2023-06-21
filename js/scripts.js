@@ -1,14 +1,27 @@
-alert('Hello world');
-
-let myName = 'Jhon Doe';
-document.write(myName);
-myName = 'Jhon Doe Jr';
-document.write(myName);
-
-let simpleAdittion = 2 + 2;
-document.write(simpleAdittion);
-
-let size = 100;
-let doubleSize = size * 2;
-let minSize = (doubleSize * 2) - (size / 2);
-document.write(minSize);
+pokemonList = [
+    {
+        name: bulbasaur,
+        pokemonNumber: 1,
+        type: ['grass', 'poison']
+    },
+    {
+        name: charmander,
+        pokemonNumber: 2,
+        type: 'fire'
+    },
+    {
+        name: squirtle,
+        pokemonNumber: 3,
+        type: 'water'
+    },
+    {
+        name: pikachu,
+        pokemonNumber: 4,
+        type: 'electric'
+    },
+    {
+        name: eevee,
+        pokemonNumber: 5,
+        type: 'normal'
+    },
+];
