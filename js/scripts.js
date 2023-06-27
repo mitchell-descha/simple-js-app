@@ -40,19 +40,20 @@ let pokemonRepository = (function () {
       return pokemonList;
     }
   
-    for (let i = 0; i < pokemonList.length; i++) {
-      let pokemon = pokemonList[i];
-      let output = pokemon.name + ' (height: ' + pokemon.height + ')';
-      
-      if (pokemon.height > 1.4) {
-        output += ' - Wow, that\'s big!';
-      }
-  
-      document.write(output + '<br>');
-    }
-  
     return {
       add: add,
       getAll: getAll
     };
   })();
+  
+  let repository = pokemonRepository;
+
+repository.getAll().forEach(function (pokemon) {
+  let output = pokemon.name + ' (height: ' + pokemon.height + ')';
+  
+  if (pokemon.height > 1.4) {
+    output += ' - Wow, that\'s big!';
+  }
+
+  document.write(output + '<br>');
+});
