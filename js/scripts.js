@@ -146,3 +146,22 @@ repository.LoadList().then(function () {
     repository.addListItem(pokemon);
   });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+  const modalContainers = document.querySelectorAll('.modal-container');
+  const modalButtons = document.querySelectorAll('.pokemon-button');
+  const closeButtons = document.querySelectorAll('.modal-close');
+
+  modalButtons.forEach(function(button, index) {
+    button.addEventListener('click', function() {
+      modalContainers[index].classList.add('modal-show');
+    });
+  });
+
+  closeButtons.forEach(function(button) {
+    button.addEventListener('click', function() {
+      const modalContainer = button.closest('.modal-container');
+      modalContainer.classList.remove('modal-show');
+    });
+  });
+});
